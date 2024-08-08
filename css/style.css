@@ -1,0 +1,208 @@
+body {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+header {
+    background-color: #f3bec3;
+    padding: 10px 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo-title img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-title h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+.lista-presentes {
+    text-align: left;
+}
+
+.lista-presentes h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.presentes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.presente-item {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.presente-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.presente-item p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.presente-item .price {
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.presente-item a button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.presente-item a button:hover {
+    background-color: #ff3b2f;
+}
+
+footer {
+    background-color: #f3bec3;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Galeria */
+.galeria {
+    text-align: left;
+}
+
+.galeria h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Local */
+.local {
+    text-align: left;
+}
+
+.local h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.local p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.map-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 500px;
+    border: 0;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .presentes-grid, .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .presentes-grid, .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-title h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .presentes-grid, .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logo-title h1 {
+        font-size: 18px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        gap: 10px;
+    }
+}
